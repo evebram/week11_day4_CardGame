@@ -28,7 +28,11 @@ public class Deck {
         Collections.shuffle(deck, new Random());
     }
 
-    public ArrayList<Card> getDeck(){
-        return this.deck;
+    public ArrayList<Card> getDeckCopy(){
+        return new ArrayList<Card>(this.deck);
+    }
+
+    public Card dealCard(){
+        return deck.remove(0);
     }
 }

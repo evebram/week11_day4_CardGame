@@ -22,8 +22,14 @@ public class DeckTest {
 
     @Test
     public void checkShuffleDeck(){
-        ArrayList<Card> originalDeck = new ArrayList<Card>(deck.getDeck());
+        ArrayList<Card> originalDeck = new ArrayList<Card>(deck.getDeckCopy());
         deck.shuffleCards();
-        assertNotEquals(originalDeck, deck.getDeck());
+        assertNotEquals(originalDeck, deck.getDeckCopy());
+    }
+
+    @Test
+    public void testDealCard(){
+        deck.dealCard();
+        assertEquals(51, deck.getDeckSize());
     }
 }
