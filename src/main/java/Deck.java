@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class Deck {
 
@@ -20,5 +22,13 @@ public class Deck {
 
     public int getDeckSize(){
         return deck.size();
+    }
+
+    public void shuffleCards(){
+        Collections.shuffle(deck, new Random());
+    }
+
+    public ArrayList<Card> getDeck(){
+        return this.deck;
     }
 }
