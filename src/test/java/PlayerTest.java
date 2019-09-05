@@ -15,6 +15,11 @@ public class PlayerTest {
     }
 
     @Test
+    public void testGetName(){
+        assertEquals("Boris", player.getName());
+    }
+
+    @Test
     public void testAddCard(){
         player.addCard(card);
         assertEquals(1, player.getHandSize());
@@ -25,6 +30,12 @@ public class PlayerTest {
     public void testPlayCard(){
         player.addCard(card);
         assertEquals(8, player.getCardValue());
+    }
+
+    @Test
+    public void testGetCard(){
+        player.addCard(card);
+        assertEquals(card, player.getCard());
     }
 
 }

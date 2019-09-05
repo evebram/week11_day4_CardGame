@@ -10,6 +10,10 @@ public class Player {
         this.hand = new ArrayList<Card>();
     }
 
+    public String getName(){
+        return this.name;
+    }
+
     public void addCard(Card card){
         hand.add(card);
     }
@@ -20,6 +24,10 @@ public class Player {
 
     public int getCardValue(){
         return hand.get(0).getRankValue();
+    }
+
+    public Card getCard(){
+        return hand.get(0);
     }
 
 }
